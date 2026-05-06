@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.git/
+.github/
+tests/
+*.md
+.env
+.venv/
+venv/
+model.joblib
+reference_stats.joblib
+monitoring/
+scripts/
+*.html

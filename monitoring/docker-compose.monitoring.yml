@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  ml-api:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: ml-api
+    ports:
+      - "8000:8000"
+    networks:
+      - mlops-net
+
+  prometheus:
+    image: prom/prometheus:v2.55.0
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--web.enable-lifecycle"
+    depends_on:
+      - ml-api
+    networks:
+      - mlops-net
+
+networks:
+  mlops-net:
+    driver: bridge
