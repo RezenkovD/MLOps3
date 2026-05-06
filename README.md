@@ -1,6 +1,9 @@
 # MLOps Лабораторна №3: Моніторинг ML API та детекція проблем
 
+[![CI](https://github.com/RezenkovD/MLOps3/actions/workflows/ci.yml/badge.svg)](https://github.com/RezenkovD/MLOps3/actions/workflows/ci.yml)
+
 **Автор:** Дмитро Рєзєнков
+**Репозиторій:** <https://github.com/RezenkovD/MLOps3>
 **Дата:** 2026-05-06
 
 > **Примітка щодо варіанту:** методичка ЛР3 не містить індивідуальних варіантів — для всіх студентів використовується класифікатор Iris, побудований у ЛР2. Ця робота розширює його шаром моніторингу.
